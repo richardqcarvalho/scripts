@@ -73,3 +73,6 @@ echo 'alias plmic="pl && mkic"' >> "$HOME/.bashrc"
 
 source "$HOME/.bashrc"
 source "$HOME/.profile"
+
+echo "Adding workaround to avoid nsjail error"
+echo "kernel.apparmor_restrict_unprivileged_userns=0" | sudo tee /usr/lib/sysctl.d/10-apparmor.conf
