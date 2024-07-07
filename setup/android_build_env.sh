@@ -70,4 +70,6 @@ echo 'alias mkc="m clean && mk"' >> "$HOME/.bashrc"
 echo 'alias plmc="pl && mkc"' >> "$HOME/.bashrc"
 echo 'alias mkic="m installclean && mk"' >> "$HOME/.bashrc"
 echo 'alias plmic="pl && mkic"' >> "$HOME/.bashrc"
+
 source "$HOME/.bashrc"
+source "$HOME/.profile"
