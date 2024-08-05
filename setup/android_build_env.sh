@@ -39,13 +39,8 @@ sudo chmod 644 /etc/udev/rules.d/51-android.rules
 sudo chown root /etc/udev/rules.d/51-android.rules
 sudo systemctl restart udev
 
-if [[ "$(command -v make)" ]]; then
-    makeversion="$(make -v | head -1 | awk '{print $3}')"
-    if [[ ${makeversion} != "${LATEST_MAKE_VERSION}" ]]; then
-        echo "Installing make ${LATEST_MAKE_VERSION} instead of ${makeversion}"
-        bash "$(dirname "$0")"/make.sh "${LATEST_MAKE_VERSION}"
-    fi
-fi
+echo "Installing make ${LATEST_MAKE_VERSION}"
+bash "$(dirname "$0")"/make.sh "${LATEST_MAKE_VERSION}"
 
 echo "Installing repo"
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
