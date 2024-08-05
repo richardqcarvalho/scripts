@@ -9,7 +9,7 @@
 bash "$(dirname "$0")"/platform-tools.sh
 
 LATEST_MAKE_VERSION="4.4.1"
-LATEST_CCACHE_VERSION="4.10.1"
+LATEST_CCACHE_VERSION="4.10.2"
 
 sudo apt install software-properties-common -y
 sudo apt update
